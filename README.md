@@ -15,7 +15,7 @@ Prever a receita diária do e-commerce (App + Site) com antecedência de até 7 
 - **Black Friday é demanda comprada; Dia das Mães é demanda orgânica.** No pico do Dia das Mães o preço por item foi R$ 70 com 29% de desconto, contra R$ 33 e 55% na Black Friday.
 - **Sexta vende 10% acima da média e domingo 22% abaixo** (sem eventos). No sábado, o App segura e o Site cai 14%.
 - Dois picos no dia: **10h-14h** (principal) e **20h-21h**. Ao meio-dia, 31% da receita do dia já aconteceu.
-- Em datas de presente, **Gifts triplica de share** (8% para 21% no Dia das Mães). O App foi de 72% para 79% da receita.
+- Em datas de presente, **Gifts quase triplica de share** (8% para 21% no Dia das Mães). O App foi de 72% para 79% da receita.
 
 **Forecast**
 - LightGBM com features de calendário, eventos e lags a partir de 7 dias, validado com backtest walk-forward (abril, maio e junho).
