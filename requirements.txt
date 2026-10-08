@@ -1,0 +1,9 @@
+pandas==2.*
+numpy
+matplotlib
+seaborn
+scikit-learn
+lightgbm
+shap
+openpyxl
+jupyter
