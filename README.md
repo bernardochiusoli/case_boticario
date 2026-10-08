@@ -1,6 +1,6 @@
 # Case Técnico · Especialista de Dados I · Grupo Boticário
 
-Previsão de venda diária do e-commerce e proposta de pipeline de IA para pontuar banners.
+Previsão de receita diária do e-commerce e proposta de pipeline de IA para pontuar banners.
 
 ## O problema
 
@@ -42,14 +42,72 @@ Prever a receita diária do e-commerce (App + Site) com antecedência de até 7 
 │   └── figures/        # gráficos usados na apresentação
 └── data/README.md      # como posicionar a base (não versionada)
 ```
+## Dados
 
-## Como rodar
+A base utilizada neste case não é versionada neste repositório. Para executar os notebooks, posicione o arquivo de entrada em:
+
+```text
+data/vendas.xlsx
+```
+
+Consulte [`data/README.md`](data/README.md) para o layout esperado, as colunas necessárias e as instruções de carregamento.
+
+> Não publique dados confidenciais, credenciais, tokens ou informações pessoais no repositório.
+
+## Como executar
+
+### Pré-requisitos
+
+- Python 3.10 ou superior
+- Jupyter Notebook ou JupyterLab
+
+### Instalação
+
+```bash
+git clone [https://github.com/bernardochiusoli/case-boticario.git](https://github.com/bernardochiusoli/case-boticario.git)
+cd case-boticario
+
+python -m venv .venv
+```
+
+**Windows (PowerShell):**
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+**macOS/Linux:**
+
+```bash
+source .venv/bin/activate
+```
+
+Instale as dependências:
 
 ```bash
 pip install -r requirements.txt
-# coloque a base em data/vendas.xlsx (ver data/README.md)
-cd notebooks
-jupyter nbconvert --to notebook --execute --inplace 01_raio_x_e_qualidade.ipynb 02_eda_insights.ipynb 03_modelagem_forecast.ipynb
 ```
 
-Seed fixa (`random_state=42`). Os notebooks já estão salvos com as saídas.
+Posicione a base em `data/vendas.xlsx`, conforme detalhado em `data/README.md`.
+
+### Execução
+
+Os notebooks devem ser executados nesta ordem:
+
+```bash
+jupyter nbconvert --to notebook --execute --inplace notebooks/01_raio_x_e_qualidade.ipynb
+jupyter nbconvert --to notebook --execute --inplace notebooks/02_eda_insights.ipynb
+jupyter nbconvert --to notebook --execute --inplace notebooks/03_modelagem_forecast.ipynb
+```
+
+Os notebooks também já estão salvos com as saídas para consulta rápida. A reprodutibilidade é apoiada por `random_state=42`.
+## Stack
+
+- Python
+- **pandas** e **NumPy:** manipulação e análise de dados
+- **Matplotlib** e **Seaborn:** visualizações
+- **scikit-learn:** ferramentas de modelagem e validação
+- **LightGBM:** modelo de forecast
+- **SHAP:** interpretação do modelo
+- **openpyxl:** leitura de arquivos Excel
+- **Jupyter:** execução dos notebooks
