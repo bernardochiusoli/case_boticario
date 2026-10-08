@@ -64,8 +64,8 @@ Consulte [`data/README.md`](data/README.md) para o layout esperado, as colunas n
 ### Instalação
 
 ```bash
-git clone [https://github.com/bernardochiusoli/case-boticario.git](https://github.com/bernardochiusoli/case-boticario.git)
-cd case-boticario
+git clone [https://github.com/bernardochiusoli/case_boticario.git](https://github.com/bernardochiusoli/case_boticario.git)
+cd case_boticario
 
 python -m venv .venv
 ```
